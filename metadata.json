@@ -1,0 +1,8 @@
+{
+  "name": "Gusto - Premium Food Delivery",
+  "description": "A modern, high-end food delivery application featuring real-time order tracking, customizable profiles, and a loyalty rewards program.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}

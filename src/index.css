@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-immersive-bg: #050505;
+  --color-immersive-card: rgba(255, 255, 255, 0.05);
+  --color-immersive-accent: #FF6B00;
+  --color-immersive-accent-glow: rgba(255, 107, 0, 0.3);
+  --color-immersive-glass: rgba(20, 20, 20, 0.8);
+  --color-immersive-text-secondary: rgba(255, 255, 255, 0.6);
+}
+
+@layer base {
+  body {
+    @apply bg-immersive-bg text-white font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at 10% 10%, #1a1a2e 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, #2e1a1a 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+}
+
+.immersive-glass {
+  @apply bg-immersive-glass backdrop-blur-xl border-white/10;
+}
+
+.immersive-card {
+  @apply bg-immersive-card border-white/5 backdrop-blur-md;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
